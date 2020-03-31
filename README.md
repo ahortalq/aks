@@ -25,6 +25,8 @@ Lo siguiente es habilitar/deshabilitar el escalado.
 
 La autenticación, networking, monitorización y tags lo dejamos por defecto. Finalmente damos a 'Create' y después de un tiempo tendremos nuestros cluster K8s creado.
 
+Seleccionar el tipo de nodo = Standard_B4ms
+
 ## Obtener las credenciales
 
 Primero nos logamos en la cuenta de Azure.
