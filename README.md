@@ -81,3 +81,14 @@ Merged "aks-cluster-k8s" as current context in /home/jcla/.kube/config
 
 Ya deberíamos poder trabajar con nuestro cluster K8s.
 
+## Iniciar el dashboard
+El cluster creado usa RBAC, por tanto se debe crear un ClusterRoleBinding para que se pueda acceder al Dashboard. Para ello ejecutar:
+```
+kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
+```
+Pero esta opción anterior no es segura, no se recomienda. Para más información: https://docs.microsoft.com/es-es/azure/aks/kubernetes-dashboard
+
+Para iniciar el Dashboard ejecutar:
+```
+az aks browse --resource-group AKS --name aks-cluster-k8s
+```
